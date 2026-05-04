@@ -107,6 +107,12 @@ export default function MaterialCategory() {
           </div>
 
           {/* Products Grid */}
+          {category.products.length === 0 && (
+            <div className="text-center py-16 mb-8">
+              <p className="text-gray-400 text-lg font-medium">Products coming soon</p>
+              <p className="text-gray-400 text-sm mt-2">Contact us for enquiries in this category</p>
+            </div>
+          )}
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5 mb-14">
             {category.products.map((product, i) => (
               <motion.div
