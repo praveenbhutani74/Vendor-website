@@ -3,6 +3,44 @@ import { Linkedin, Target, Shield, CheckCircle2 } from "lucide-react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 
+const trustedBy = [
+  { name: "Adani Group",    logo: "https://vendorinfra.com/wp-content/uploads/2025/11/Adani-Group-1.webp" },
+  { name: "NCC",            logo: "https://vendorinfra.com/wp-content/uploads/2025/11/logo-dmia-2-1.webp" },
+  { name: "Tata Projects",  logo: "https://vendorinfra.com/wp-content/uploads/2025/11/tata_projects_logo-removebg-preview-1-e1665663043137.webp" },
+  { name: "JWIL",           logo: "https://vendorinfra.com/wp-content/uploads/2025/11/JWIL-Logo-e1649507267477.webp" },
+  { name: "Gawar",          logo: "https://vendorinfra.com/wp-content/uploads/2025/11/logo-dmia-2-2.webp" },
+  { name: "JMC Projects",   logo: "https://vendorinfra.com/wp-content/uploads/2025/11/JMC-logo.webp" },
+  { name: "Dilip Buildcon", logo: "https://vendorinfra.com/wp-content/uploads/2025/11/photo_2022-09-09_17-00-34.webp" },
+  { name: "INOX Wind",      logo: "https://vendorinfra.com/wp-content/uploads/2025/11/INOX-wind-logo-1.webp" },
+  { name: "IndInfravit",    logo: "https://vendorinfra.com/wp-content/uploads/2025/11/indinfravit.webp" },
+  { name: "KEC",            logo: "https://vendorinfra.com/wp-content/uploads/2025/11/logo-dmia-2-5.webp" },
+  { name: "Kalpataru",      logo: "https://vendorinfra.com/wp-content/uploads/2025/11/logo-dmia-2-4.webp" },
+  { name: "IRB Infra",      logo: "https://vendorinfra.com/wp-content/uploads/2025/11/logo-dmia-2-3.webp" },
+];
+
+function LogoMarquee({ logos }: { logos: { name: string; logo: string }[] }) {
+  const doubled = [...logos, ...logos];
+  return (
+    <div className="relative overflow-hidden">
+      <div
+        className="flex gap-8 items-center"
+        style={{ animation: "marquee 28s linear infinite", width: "max-content" }}
+      >
+        {doubled.map((l, i) => (
+          <div
+            key={i}
+            className="flex-shrink-0 flex items-center justify-center h-14 px-5 bg-white rounded-xl border border-gray-100 shadow-sm hover:scale-105 transition-transform duration-200"
+            style={{ minWidth: 120 }}
+          >
+            <img src={l.logo} alt={l.name} className="max-h-10 max-w-[110px] object-contain" loading="lazy" />
+          </div>
+        ))}
+      </div>
+      <style>{`@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}`}</style>
+    </div>
+  );
+}
+
 const usps = [
   "End to End Value Chain Integration",
   "Single Unified Data Lake",
@@ -191,6 +229,17 @@ export default function About() {
                 </motion.div>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* Trusted By */}
+        <section className="py-12 bg-white border-b border-gray-100">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-8">
+              <p className="text-[#1a4fdb] font-semibold uppercase tracking-widest text-xs mb-1">Trusted By</p>
+              <h2 className="text-xl font-bold text-[#0c1c5e]">Chosen by the companies building India's National Infrastructure pipeline</h2>
+            </div>
+            <LogoMarquee logos={trustedBy} />
           </div>
         </section>
 
