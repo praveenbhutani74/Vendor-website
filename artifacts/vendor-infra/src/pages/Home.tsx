@@ -134,91 +134,41 @@ const testimonials = [
   },
 ];
 
-/* Branded partner logo components */
-const partners: { name: string; logo: React.ReactNode }[] = [
-  {
-    name: "HDFC Bank",
-    logo: (
-      <div className="flex flex-col items-center justify-center gap-0.5">
-        <div className="bg-[#004C8F] text-white font-black text-sm px-3 py-1 rounded tracking-wide leading-none flex items-center gap-1">
-          <span className="text-[#EE3124] font-black text-base leading-none">H</span>
-          <span>HDFC</span>
-          <span className="text-white/70 text-[9px] font-bold">BANK</span>
-        </div>
-        <span className="text-[9px] text-gray-500">We understand your world</span>
-      </div>
-    ),
-  },
-  {
-    name: "Aditya Birla Capital",
-    logo: (
-      <div className="flex flex-col items-center gap-0.5">
-        <div className="flex items-center gap-1">
-          <div className="w-6 h-6 rounded-full bg-gradient-to-br from-[#E11B22] to-[#F7941D] flex items-center justify-center">
-            <span className="text-white font-black text-xs">A</span>
-          </div>
-          <div className="leading-tight">
-            <div className="text-[#E11B22] font-black text-xs tracking-wide leading-none">ADITYA BIRLA</div>
-            <div className="text-[#E11B22] font-black text-xs tracking-widest leading-none">CAPITAL</div>
-          </div>
-        </div>
-      </div>
-    ),
-  },
-  {
-    name: "Tata Capital",
-    logo: (
-      <div className="flex flex-col items-center gap-0.5">
-        <div className="flex items-center gap-1">
-          <div className="w-7 h-5 flex items-center justify-center border border-gray-800 rounded-sm">
-            <span className="text-gray-900 font-black text-[10px] tracking-widest">TATA</span>
-          </div>
-          <span className="text-gray-900 font-black text-sm tracking-wide">Capital</span>
-        </div>
-        <span className="text-gray-500 text-[9px] italic">Count on us</span>
-      </div>
-    ),
-  },
-  {
-    name: "Shriram Finance",
-    logo: (
-      <div className="flex flex-col items-center">
-        <div className="bg-[#F7A800] px-2 py-0.5 rounded">
-          <span className="text-[#231F20] font-black text-sm tracking-wide">SHRIRAM</span>
-        </div>
-        <span className="text-gray-700 font-semibold text-xs tracking-wide">Finance</span>
-      </div>
-    ),
-  },
-  {
-    name: "L&T Finance",
-    logo: (
-      <div className="flex items-center gap-1.5">
-        <div className="w-9 h-9 rounded-full border-2 border-[#009933] flex items-center justify-center">
-          <span className="text-[#009933] font-black text-xs leading-none">L&T</span>
-        </div>
-        <div className="text-gray-800 font-bold text-sm leading-tight">
-          <div>L&T</div>
-          <div className="text-xs font-semibold text-gray-500">Finance</div>
-        </div>
-      </div>
-    ),
-  },
-  {
-    name: "IDFC FIRST Bank",
-    logo: (
-      <div className="flex flex-col items-center gap-0.5">
-        <div className="flex items-center gap-0.5">
-          {["I","D","F","C"].map((l, i) => (
-            <div key={i} className={`w-5 h-6 flex items-center justify-center font-black text-sm rounded-sm ${
-              i === 0 ? "bg-[#9B59B6] text-white" : i === 1 ? "bg-[#E74C3C] text-white" : i === 2 ? "bg-[#2980B9] text-white" : "bg-[#27AE60] text-white"
-            }`}>{l}</div>
-          ))}
-        </div>
-        <span className="text-gray-500 text-[9px] font-semibold tracking-widest">IDFC LIMITED</span>
-      </div>
-    ),
-  },
+const trustedBy = [
+  { name: "Adani Group",    logo: "https://vendorinfra.com/wp-content/uploads/2025/11/Adani-Group-1.webp" },
+  { name: "NCC",            logo: "https://vendorinfra.com/wp-content/uploads/2025/11/logo-dmia-2-1.webp" },
+  { name: "Tata Projects",  logo: "https://vendorinfra.com/wp-content/uploads/2025/11/tata_projects_logo-removebg-preview-1-e1665663043137.webp" },
+  { name: "JWIL",           logo: "https://vendorinfra.com/wp-content/uploads/2025/11/JWIL-Logo-e1649507267477.webp" },
+  { name: "Gawar",          logo: "https://vendorinfra.com/wp-content/uploads/2025/11/logo-dmia-2-2.webp" },
+  { name: "JMC Projects",   logo: "https://vendorinfra.com/wp-content/uploads/2025/11/JMC-logo.webp" },
+  { name: "Dilip Buildcon", logo: "https://vendorinfra.com/wp-content/uploads/2025/11/photo_2022-09-09_17-00-34.webp" },
+  { name: "INOX Wind",      logo: "https://vendorinfra.com/wp-content/uploads/2025/11/INOX-wind-logo-1.webp" },
+  { name: "IndInfravit",    logo: "https://vendorinfra.com/wp-content/uploads/2025/11/indinfravit.webp" },
+  { name: "KEC",            logo: "https://vendorinfra.com/wp-content/uploads/2025/11/logo-dmia-2-5.webp" },
+  { name: "Kalpataru",      logo: "https://vendorinfra.com/wp-content/uploads/2025/11/logo-dmia-2-4.webp" },
+  { name: "IRB Infra",      logo: "https://vendorinfra.com/wp-content/uploads/2025/11/logo-dmia-2-3.webp" },
+];
+
+const associations = [
+  { name: "ISO 14001",        logo: "https://vendorinfra.com/wp-content/uploads/2025/12/iso-14001-certification-label-vector-1811356-e1766492588397.avif" },
+  { name: "ISO 27001",        logo: "https://vendorinfra.com/wp-content/uploads/2025/12/iso-27001-certification-label-vector-1811348-e1766492622776.avif" },
+  { name: "ISO Certified",    logo: "https://vendorinfra.com/wp-content/uploads/2025/12/iso-certified-golden-label-vector-illustration-51941869.webp" },
+  { name: "GEM",              logo: "https://vendorinfra.com/wp-content/uploads/2025/12/GEM.png" },
+  { name: "FICCI",            logo: "https://vendorinfra.com/wp-content/uploads/2025/12/FICCI_logo.svg.png" },
+  { name: "Startup India",    logo: "https://vendorinfra.com/wp-content/uploads/2025/12/m1-logo.png" },
+  { name: "CII",              logo: "https://vendorinfra.com/wp-content/uploads/2025/12/Official_logo_of_the_Confederation_of_Indian_Industry_CII.svg.png" },
+  { name: "DPIIT",            logo: "https://vendorinfra.com/wp-content/uploads/2025/12/Screenshot-2025-12-23-at-6.05.03-PM.png" },
+  { name: "InvoiceMart",      logo: "https://vendorinfra.com/wp-content/uploads/2025/12/invoicemartlogo.png" },
+  { name: "MSME",             logo: "https://vendorinfra.com/wp-content/uploads/2025/12/msme-logo.webp" },
+];
+
+const financingPartners = [
+  { name: "HDFC Bank",           logo: "https://vendorinfra.com/wp-content/uploads/2025/12/HDFC-Bank-logo-scaled.png" },
+  { name: "Aditya Birla Capital", logo: "https://vendorinfra.com/wp-content/uploads/2025/12/ABC-Logo_600-x-315.jpg" },
+  { name: "Tata Capital",        logo: "https://vendorinfra.com/wp-content/uploads/2025/12/Tata_Capital_Logo-01-scaled.jpg" },
+  { name: "Shriram Finance",     logo: "https://vendorinfra.com/wp-content/uploads/2025/12/a8e302e62f283694c1c25f1d1233d7a4.jpg" },
+  { name: "L&T Finance",         logo: "https://vendorinfra.com/wp-content/uploads/2025/12/l-t-finance-logo_black-white-1.webp" },
+  { name: "IDFC FIRST Bank",     logo: "https://vendorinfra.com/wp-content/uploads/2025/12/IDFC.NS_BIG-e9912e55.png" },
 ];
 
 const whyPoints = [
@@ -230,61 +180,36 @@ const whyPoints = [
   { title: "Dedicated Support & Accountability",desc: "Round-the-clock team with dedicated account managers to guide you at every stage." },
 ];
 
-/* ── PartnerCarousel ──────────────────────────────── */
-function PartnerCarousel() {
-  const [active, setActive] = useState(0);
-  const total = partners.length;
-
-  useEffect(() => {
-    const t = setInterval(() => setActive(p => (p + 1) % total), 3500);
-    return () => clearInterval(t);
-  }, [total]);
-
+/* ── LogoMarquee — infinite auto-scroll strip ─────── */
+function LogoMarquee({ logos, bg = "white" }: { logos: { name: string; logo: string }[]; bg?: string }) {
+  const doubled = [...logos, ...logos];
   return (
-    <div>
-      <div className="flex items-center justify-between gap-4">
-        <button
-          onClick={() => setActive(p => (p - 1 + total) % total)}
-          className="w-9 h-9 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 hover:border-[#1a4fdb] hover:text-[#1a4fdb] transition-colors shrink-0"
-        >
-          <ChevronLeft className="w-5 h-5" />
-        </button>
-
-        {/* Show all 6 at once on desktop, wrap on mobile */}
-        <div className="flex-1 overflow-hidden">
-          <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-6">
-            {partners.map((p, i) => (
-              <motion.div
-                key={p.name}
-                animate={{ opacity: i === active ? 1 : 0.45, scale: i === active ? 1.08 : 1 }}
-                transition={{ duration: 0.4 }}
-                onClick={() => setActive(i)}
-                className="cursor-pointer flex items-center justify-center min-w-[110px] min-h-[56px] hover:opacity-100 transition-opacity"
-              >
-                {p.logo}
-              </motion.div>
-            ))}
-          </div>
-        </div>
-
-        <button
-          onClick={() => setActive(p => (p + 1) % total)}
-          className="w-9 h-9 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 hover:border-[#1a4fdb] hover:text-[#1a4fdb] transition-colors shrink-0"
-        >
-          <ChevronRight className="w-5 h-5" />
-        </button>
-      </div>
-
-      {/* dots */}
-      <div className="flex justify-center gap-2 mt-8">
-        {partners.map((_, i) => (
-          <button
+    <div className="relative overflow-hidden">
+      <div
+        className="flex gap-10 items-center"
+        style={{ animation: "marquee 28s linear infinite", width: "max-content" }}
+      >
+        {doubled.map((l, i) => (
+          <div
             key={i}
-            onClick={() => setActive(i)}
-            className={`rounded-full transition-all duration-300 ${i === active ? "w-6 h-2 bg-[#1a4fdb]" : "w-2 h-2 bg-gray-300 hover:bg-gray-400"}`}
-          />
+            className={`flex-shrink-0 flex items-center justify-center h-14 px-4 bg-${bg === "dark" ? "white/10" : "white"} rounded-xl border ${bg === "dark" ? "border-white/10" : "border-gray-100"} shadow-sm hover:scale-105 transition-transform duration-200`}
+            style={{ minWidth: 120 }}
+          >
+            <img
+              src={l.logo}
+              alt={l.name}
+              className={`max-h-10 max-w-[110px] object-contain ${bg === "dark" ? "brightness-0 invert" : ""}`}
+              loading="lazy"
+            />
+          </div>
         ))}
       </div>
+      <style>{`
+        @keyframes marquee {
+          0%   { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+      `}</style>
     </div>
   );
 }
@@ -349,6 +274,17 @@ export default function Home() {
           </div>
         </div>
 
+      </section>
+
+      {/* ── TRUSTED BY ─────────────────────────────── */}
+      <section className="py-12 bg-white border-b border-gray-100">
+        <div className="container mx-auto px-4">
+          <FadeUp className="text-center mb-8">
+            <p className="text-[#1a4fdb] font-semibold uppercase tracking-widest text-xs mb-1">Trusted By</p>
+            <h2 className="text-xl font-bold text-[#0c1c5e]">Chosen by the companies building India's National Infrastructure pipeline</h2>
+          </FadeUp>
+          <LogoMarquee logos={trustedBy} />
+        </div>
       </section>
 
       {/* ── STATS ──────────────────────────────────── */}
@@ -638,6 +574,17 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── ASSOCIATIONS ───────────────────────────── */}
+      <section className="py-12 bg-gray-50 border-y border-gray-100">
+        <div className="container mx-auto px-4">
+          <FadeUp className="text-center mb-8">
+            <p className="text-[#1a4fdb] font-semibold uppercase tracking-widest text-xs mb-1">Associations</p>
+            <h2 className="text-xl font-bold text-[#0c1c5e]">We are Proud to be a part of</h2>
+          </FadeUp>
+          <LogoMarquee logos={associations} />
+        </div>
+      </section>
+
       {/* ── FINANCING PARTNERS ─────────────────────── */}
       <section className="py-20 bg-white border-t border-gray-100">
         <div className="container mx-auto px-4 max-w-5xl">
@@ -648,7 +595,21 @@ export default function Home() {
             </h2>
           </FadeUp>
           <FadeUp delay={0.1}>
-            <PartnerCarousel />
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-5">
+              {financingPartners.map((p) => (
+                <div
+                  key={p.name}
+                  className="flex items-center justify-center h-20 px-4 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-200"
+                >
+                  <img
+                    src={p.logo}
+                    alt={p.name}
+                    className="max-h-12 max-w-[110px] object-contain"
+                    loading="lazy"
+                  />
+                </div>
+              ))}
+            </div>
           </FadeUp>
         </div>
       </section>
