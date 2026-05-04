@@ -1,3 +1,4 @@
+import { Link } from "wouter";
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 import { Navbar } from "@/components/layout/Navbar";
@@ -296,7 +297,7 @@ function PlanCard({
         ))}
       </ul>
 
-      <a
+      <Link
         href="/contact"
         className={`block text-center font-semibold py-3 px-6 rounded-full transition-all duration-200 ${
           plan.highlight
@@ -305,7 +306,7 @@ function PlanCard({
         }`}
       >
         {plan.cta}
-      </a>
+      </Link>
     </motion.div>
   );
 }
@@ -455,12 +456,12 @@ export default function Pricing() {
           <p className="text-blue-100 mb-8 max-w-xl mx-auto">
             Our team will help you find the best fit. Book a free demo and we will walk you through everything.
           </p>
-          <a
+          <Link
             href="/contact"
             className="inline-block bg-white text-[#1a4fdb] font-semibold px-8 py-4 rounded-full hover:bg-blue-50 transition-colors"
           >
             Book a Free Demo
-          </a>
+          </Link>
         </div>
       </section>
 

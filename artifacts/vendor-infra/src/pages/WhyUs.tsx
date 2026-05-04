@@ -1,3 +1,4 @@
+import { Link } from "wouter";
 import { motion } from "framer-motion";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -85,12 +86,12 @@ export default function WhyUs() {
           <p className="text-blue-100 mb-8 max-w-xl mx-auto">
             Join thousands of infrastructure professionals already using Vendor Infra.
           </p>
-          <a
+          <Link
             href="/contact"
             className="inline-block bg-white text-[#1a4fdb] font-semibold px-8 py-4 rounded-full hover:bg-blue-50 transition-colors"
           >
             Book a Free Demo
-          </a>
+          </Link>
         </div>
       </section>
 

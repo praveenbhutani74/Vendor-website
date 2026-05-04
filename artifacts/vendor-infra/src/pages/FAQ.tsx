@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { Navbar } from "@/components/layout/Navbar";
@@ -125,12 +126,12 @@ export default function FAQ() {
             <p className="text-blue-100 mb-6 text-sm">
               Our team is ready to help. Reach out and we will get back to you within one business day.
             </p>
-            <a
+            <Link
               href="/contact"
               className="inline-block bg-white text-[#1a4fdb] font-semibold px-6 py-3 rounded-full hover:bg-blue-50 transition-colors text-sm"
             >
               Contact Us
-            </a>
+            </Link>
           </div>
         </div>
       </section>
