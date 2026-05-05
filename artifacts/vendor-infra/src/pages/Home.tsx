@@ -29,18 +29,30 @@ function Counter({ target, suffix = "", prefix = "" }: { target: number; suffix?
 }
 
 /* -- fade-up wrapper -------------------------------- */
-function FadeUp({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) {
+function FadeUp({
+  children,
+  delay = 0,
+  className = "",
+}: {
+  children: React.ReactNode
+  delay?: number
+  className?: string
+}) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 32 }}
+      initial={{ opacity: 0, y: 28 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
-      transition={{ duration: 0.6, delay, ease: [0.22, 1, 0.36, 1] }}
+      transition={{
+        duration: 0.6,
+        delay,
+        ease: [0.22, 1, 0.36, 1] as const
+      }}
       className={className}
     >
       {children}
     </motion.div>
-  );
+  )
 }
 
 /* -- stagger grid container ------------------------ */
@@ -50,9 +62,15 @@ const gridVariants = {
 };
 const gridItem = {
   hidden: { opacity: 0, y: 24 },
-  show:   { opacity: 1, y: 0, transition: { duration: 0.45, ease: [0.22, 1, 0.36, 1] } },
-};
-
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.45,
+      ease: [0.22, 1, 0.36, 1] as const
+    }
+  },
+}
 /* -- data ------------------------------------------- */
 const services = [
   { icon: Search,      title: "AI-Powered Vendor Discovery",     desc: "Search and compare verified vendors by rating, size, and capability for every item in your Bill of Quantities." },
@@ -123,7 +141,7 @@ const testimonials = [
   {
     name: "Priya Sharma",
     role: "Procurement Head, Infrastructure Developer",
-    text: "The price discovery feature alone is worth it. We received 8 competitive quotes within 48 hours — something that used to take us 3 weeks manually.",
+    text: "The price discovery feature alone is worth it. We received 8 competitive quotes within 48 hours ï¿½ something that used to take us 3 weeks manually.",
     rating: 5,
   },
   {
@@ -172,15 +190,15 @@ const financingPartners = [
 ];
 
 const whyPoints = [
-  { title: "End-to-End Value Chain Integration", desc: "From vendor discovery and material procurement to financing, insurance and equipment hire/sales — one platform." },
-  { title: "Single Unified Data Lake",           desc: "All project, procurement, vendor, and site data — fully unified and instantly accessible. Eliminate silos." },
+  { title: "End-to-End Value Chain Integration", desc: "From vendor discovery and material procurement to financing, insurance and equipment hire/sales ï¿½ one platform." },
+  { title: "Single Unified Data Lake",           desc: "All project, procurement, vendor, and site data ï¿½ fully unified and instantly accessible. Eliminate silos." },
   { title: "Smart Decision Support via Market Intelligence", desc: "Sector insights, schedules of rates, competitive intelligence, and tender & PQ samples." },
   { title: "AI & ML-Driven Insights",           desc: "Match with the best-suited vendors and generate real-time analytics for smarter, data-backed decisions." },
   { title: "Safety, Security & Trust Built In", desc: "Every vendor is vetted. ISO 27001-certified data security ensures your information is always protected." },
   { title: "Dedicated Support & Accountability",desc: "Round-the-clock team with dedicated account managers to guide you at every stage." },
 ];
 
-/* -- LogoMarquee — infinite auto-scroll strip ------- */
+/* -- LogoMarquee ï¿½ infinite auto-scroll strip ------- */
 function LogoMarquee({ logos, bg = "white" }: { logos: { name: string; logo: string }[]; bg?: string }) {
   const doubled = [...logos, ...logos];
   return (
