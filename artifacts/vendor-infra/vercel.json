@@ -1,5 +1,10 @@
 {
+  "framework": "vite",
+  "installCommand": "pnpm install",
+  "buildCommand": "cd artifacts/vendor-infra && pnpm build",
+  "outputDirectory": "artifacts/vendor-infra/dist",
   "routes": [
-    { "src": "/(.*)", "dest": "/index.html" }
+    { "handle": "filesystem" },
+    { "src": "/.*", "dest": "/index.html" }
   ]
 }
