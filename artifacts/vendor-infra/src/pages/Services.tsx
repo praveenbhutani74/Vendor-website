@@ -206,8 +206,8 @@ function FAQItem({ q, a }: { q: string; a: string }) {
         onClick={() => setOpen(!open)}
         className="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-gray-50 transition-colors"
       >
-        <span className="font-semibold text-[#0c1c5e] pr-4">{q}</span>
-        <ChevronDown className={`w-5 h-5 text-[#1a4fdb] shrink-0 transition-transform duration-300 ${open ? "rotate-180" : ""}`} />
+        <span className="font-semibold text-[#00244F] pr-4">{q}</span>
+        <ChevronDown className={`w-5 h-5 text-[#FF7F00] shrink-0 transition-transform duration-300 ${open ? "rotate-180" : ""}`} />
       </button>
       <motion.div
         initial={false}
@@ -227,11 +227,11 @@ export default function Services() {
       <Navbar />
 
       {/* ── HERO ─────────────────────────────────── */}
-      <section className="relative bg-[#0c1c5e] text-white py-24 overflow-hidden">
+      <section className="relative bg-[#00244F] text-white py-24 overflow-hidden">
         <div className="absolute inset-0 opacity-[0.07]"
           style={{ backgroundImage: "radial-gradient(circle at 1px 1px,#ffffff 1px,transparent 0)", backgroundSize: "36px 36px" }} />
         <div className="container mx-auto px-4 relative z-10 text-center max-w-4xl">
-          <motion.p initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} className="text-blue-300 font-semibold uppercase tracking-widest text-sm mb-4">
+          <motion.p initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} className="text-[#FFB401] font-semibold uppercase tracking-widest text-sm mb-4">
             Our Services
           </motion.p>
           <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}
@@ -239,7 +239,7 @@ export default function Services() {
             Redefining Collaboration with<br />10+ Integrated Services
           </motion.h1>
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
-            className="text-blue-200 text-lg max-w-2xl mx-auto">
+            className="text-white/80 text-lg max-w-2xl mx-auto">
             Comprehensive AI-powered solutions for every stage of your infrastructure and construction lifecycle.
           </motion.p>
         </div>
@@ -254,20 +254,20 @@ export default function Services() {
                 {/* Content */}
                 <div className={service.flip ? "lg:order-2" : ""}>
                   <div className="flex items-center gap-3 mb-6">
-                    <div className="w-11 h-11 bg-[#1a4fdb]/10 rounded-xl flex items-center justify-center">
-                      <service.icon className="w-5 h-5 text-[#1a4fdb]" />
+                    <div className="w-11 h-11 bg-[#FF7F00]/10 rounded-xl flex items-center justify-center">
+                      <service.icon className="w-5 h-5 text-[#FF7F00]" />
                     </div>
-                    <h2 className="text-2xl md:text-3xl font-bold text-[#0c1c5e]">{service.title}</h2>
+                    <h2 className="text-2xl md:text-3xl font-bold text-[#00244F]">{service.title}</h2>
                   </div>
 
                   <div className="space-y-6">
                     {service.points.map((point, i) => (
                       <div key={i} className="flex gap-4">
-                        <div className="w-6 h-6 rounded-full bg-[#1a4fdb] flex items-center justify-center shrink-0 mt-0.5">
+                        <div className="w-6 h-6 rounded-full bg-[#FF7F00] flex items-center justify-center shrink-0 mt-0.5">
                           <CheckCircle2 className="w-3.5 h-3.5 text-white" />
                         </div>
                         <div>
-                          <h4 className="font-semibold text-[#0c1c5e] mb-1">{point.label}</h4>
+                          <h4 className="font-semibold text-[#00244F] mb-1">{point.label}</h4>
                           <p className="text-gray-500 text-sm leading-relaxed">{point.desc}</p>
                         </div>
                       </div>
@@ -300,8 +300,8 @@ export default function Services() {
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4 max-w-6xl">
           <FadeUp className="text-center mb-14">
-            <p className="text-[#1a4fdb] font-semibold uppercase tracking-widest text-sm mb-3">Why Choose Us</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0c1c5e]">Our Service Advantages<br />That Deliver Results</h2>
+            <p className="text-[#FF7F00] font-semibold uppercase tracking-widest text-sm mb-3">Why Choose Us</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#00244F]">Our Service Advantages<br />That Deliver Results</h2>
           </FadeUp>
 
           <motion.div
@@ -313,11 +313,11 @@ export default function Services() {
           >
             {advantages.map((adv, i) => (
               <motion.div key={i} variants={{ hidden: { opacity: 0, y: 24 }, show: { opacity: 1, y: 0, transition: { duration: 0.5 } } }}>
-                <div className="bg-white rounded-2xl p-7 shadow-sm border border-gray-100 hover:shadow-md hover:border-[#1a4fdb]/20 transition-all duration-300 h-full">
-                  <div className="w-12 h-12 bg-[#1a4fdb]/10 rounded-xl flex items-center justify-center mb-5">
-                    <adv.icon className="w-6 h-6 text-[#1a4fdb]" />
+                <div className="bg-white rounded-2xl p-7 shadow-sm border border-gray-100 hover:shadow-md hover:border-[#FF7F00]/20 transition-all duration-300 h-full">
+                  <div className="w-12 h-12 bg-[#FF7F00]/10 rounded-xl flex items-center justify-center mb-5">
+                    <adv.icon className="w-6 h-6 text-[#FF7F00]" />
                   </div>
-                  <h3 className="font-bold text-[#0c1c5e] mb-2">{adv.title}</h3>
+                  <h3 className="font-bold text-[#00244F] mb-2">{adv.title}</h3>
                   <p className="text-gray-500 text-sm leading-relaxed">{adv.desc}</p>
                 </div>
               </motion.div>
@@ -330,8 +330,8 @@ export default function Services() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 max-w-3xl">
           <FadeUp className="text-center mb-12">
-            <p className="text-[#1a4fdb] font-semibold uppercase tracking-widest text-sm mb-3">FAQ</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0c1c5e]">Your Questions about our Services</h2>
+            <p className="text-[#FF7F00] font-semibold uppercase tracking-widest text-sm mb-3">FAQ</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#00244F]">Your Questions about our Services</h2>
           </FadeUp>
 
           <FadeUp delay={0.1} className="space-y-4">
@@ -343,16 +343,16 @@ export default function Services() {
       </section>
 
       {/* ── VIDEO ────────────────────────────────── */}
-      <section className="py-20 bg-[#0c1c5e] relative overflow-hidden">
+      <section className="py-20 bg-[#00244F] relative overflow-hidden">
         <div className="absolute inset-0 opacity-[0.07]"
           style={{ backgroundImage: "radial-gradient(circle at 1px 1px,#ffffff 1px,transparent 0)", backgroundSize: "36px 36px" }} />
         <div className="container mx-auto px-4 relative z-10 max-w-4xl">
           <FadeUp className="text-center mb-10">
-            <p className="text-blue-300 font-semibold uppercase tracking-widest text-sm mb-3">Watch</p>
+            <p className="text-[#FFB401] font-semibold uppercase tracking-widest text-sm mb-3">Watch</p>
             <h2 className="text-3xl md:text-4xl font-bold text-white">
               Get to know more about our Services
             </h2>
-            <p className="text-blue-200 mt-4 max-w-xl mx-auto">
+            <p className="text-white/80 mt-4 max-w-xl mx-auto">
               See how Vendor Infra is transforming procurement and collaboration for infrastructure companies across India.
             </p>
           </FadeUp>
@@ -371,7 +371,7 @@ export default function Services() {
 
           <FadeUp delay={0.2} className="text-center mt-10">
             <Link href="/contact">
-              <button className="inline-flex items-center gap-2 bg-white text-[#0c1c5e] font-bold px-8 py-4 rounded-full hover:bg-blue-50 transition-all hover:scale-105 shadow-lg">
+              <button className="inline-flex items-center gap-2 bg-white text-[#00244F] font-bold px-8 py-4 rounded-full hover:bg-[#FFF4E0] transition-all hover:scale-105 shadow-lg">
                 Get Started with Us <ArrowRight className="w-4 h-4" />
               </button>
             </Link>

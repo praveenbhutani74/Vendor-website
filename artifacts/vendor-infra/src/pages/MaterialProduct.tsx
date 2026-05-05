@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { ChevronRight, Minus, Plus, RotateCcw, ShoppingCart, Check, ShoppingBag } from "lucide-react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { MaterialImage } from "@/components/materials/MaterialImage";
 import { categories, getProductBySlug } from "@/lib/materialsData";
 import { useQuoteCart } from "@/lib/quoteCart";
 
@@ -22,8 +23,8 @@ export default function MaterialProduct() {
         <Navbar />
         <div className="flex-1 flex items-center justify-center">
           <div className="text-center">
-            <h2 className="text-2xl font-bold text-[#0c1c5e] mb-4">Product not found</h2>
-            <Link href="/materials" className="text-[#1a4fdb] hover:underline">← Back to Materials</Link>
+            <h2 className="text-2xl font-bold text-[#00244F] mb-4">Product not found</h2>
+            <Link href="/materials" className="text-[#FF7F00] hover:underline">← Back to Materials</Link>
           </div>
         </div>
         <Footer />
@@ -57,15 +58,15 @@ export default function MaterialProduct() {
       {/* Breadcrumb */}
       <div className="bg-gray-50 border-b py-3 px-4">
         <div className="container mx-auto flex flex-wrap items-center gap-2 text-sm text-gray-500">
-          <Link href="/" className="hover:text-[#1a4fdb]">Home</Link>
+          <Link href="/" className="hover:text-[#FF7F00]">Home</Link>
           <ChevronRight className="w-4 h-4" />
-          <Link href="/materials" className="hover:text-[#1a4fdb]">Materials</Link>
+          <Link href="/materials" className="hover:text-[#FF7F00]">Materials</Link>
           <ChevronRight className="w-4 h-4" />
-          <Link href={`/materials/${category.slug}`} className="hover:text-[#1a4fdb]">{category.name}</Link>
+          <Link href={`/materials/${category.slug}`} className="hover:text-[#FF7F00]">{category.name}</Link>
           <ChevronRight className="w-4 h-4" />
-          <span className="text-[#1a4fdb] font-medium">{product.name}</span>
+          <span className="text-[#FF7F00] font-medium">{product.name}</span>
           {total > 0 && (
-            <Link href="/quote-cart" className="ml-auto flex items-center gap-2 bg-[#1a4fdb] text-white px-4 py-1.5 rounded-full text-sm font-semibold hover:bg-[#0c1c5e] transition-colors">
+            <Link href="/quote-cart" className="ml-auto flex items-center gap-2 bg-[#FF7F00] text-white px-4 py-1.5 rounded-full text-sm font-semibold hover:bg-[#00244F] transition-colors">
               <ShoppingCart className="w-4 h-4" />
               Quote Cart ({total})
             </Link>
@@ -83,9 +84,10 @@ export default function MaterialProduct() {
               animate={{ opacity: 1, x: 0 }}
               className="border border-gray-200 rounded-2xl overflow-hidden"
             >
-              <img
+              <MaterialImage
                 src={product.image}
                 alt={product.name}
+                label={product.name}
                 className="w-full h-80 object-cover"
               />
             </motion.div>
@@ -96,7 +98,7 @@ export default function MaterialProduct() {
               animate={{ opacity: 1, x: 0 }}
               className="border border-gray-200 rounded-2xl p-8"
             >
-              <h1 className="text-2xl font-bold text-[#1a4fdb] mb-6">{product.name}</h1>
+              <h1 className="text-2xl font-bold text-[#FF7F00] mb-6">{product.name}</h1>
               <p className="text-gray-500 text-sm mb-6 leading-relaxed">{product.description}</p>
 
               {/* Product (variant) selector */}
@@ -106,7 +108,7 @@ export default function MaterialProduct() {
                   <select
                     value={selectedVariant}
                     onChange={e => setSelectedVariant(Number(e.target.value))}
-                    className="flex-1 border border-gray-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#1a4fdb]/30 focus:border-[#1a4fdb]"
+                    className="flex-1 border border-gray-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#FF7F00]/30 focus:border-[#FF7F00]"
                   >
                     <option value="" disabled>Choose an option</option>
                     {product.variants.map((v, i) => (
@@ -124,7 +126,7 @@ export default function MaterialProduct() {
                   <select
                     value={selectedUnit}
                     onChange={e => setSelectedUnit(Number(e.target.value))}
-                    className="flex-1 border border-gray-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#1a4fdb]/30 focus:border-[#1a4fdb]"
+                    className="flex-1 border border-gray-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#FF7F00]/30 focus:border-[#FF7F00]"
                   >
                     <option value="" disabled>Choose an option</option>
                     {product.units.map((u, i) => (
@@ -168,7 +170,7 @@ export default function MaterialProduct() {
                 className={`w-full flex items-center justify-center gap-2 py-3.5 rounded-xl font-bold text-base transition-all duration-300 ${
                   added
                     ? "bg-green-600 text-white"
-                    : "bg-[#1a4fdb] hover:bg-[#0c1c5e] text-white"
+                    : "bg-[#FF7F00] hover:bg-[#00244F] text-white"
                 }`}
               >
                 {added ? <Check className="w-5 h-5" /> : <ShoppingBag className="w-5 h-5" />}
@@ -177,7 +179,7 @@ export default function MaterialProduct() {
 
               {added && (
                 <div className="mt-3 text-center">
-                  <Link href="/quote-cart" className="text-[#1a4fdb] text-sm hover:underline font-medium">
+                  <Link href="/quote-cart" className="text-[#FF7F00] text-sm hover:underline font-medium">
                     View Quote Cart →
                   </Link>
                 </div>
@@ -188,7 +190,7 @@ export default function MaterialProduct() {
           {/* Related Products */}
           {relatedProducts.length > 0 && (
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-xl font-bold text-[#0c1c5e] mb-6">Related Products</h2>
+              <h2 className="text-xl font-bold text-[#00244F] mb-6">Related Products</h2>
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5">
                 {relatedProducts.map((rp, i) => (
                   <motion.div
@@ -201,16 +203,16 @@ export default function MaterialProduct() {
                   >
                     <Link href={`/materials/${category.slug}/${rp.slug}`}>
                       <div className="h-32 overflow-hidden">
-                        <img src={rp.image} alt={rp.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                        <MaterialImage src={rp.image} alt={rp.name} label={rp.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                       </div>
                       <div className="p-3">
-                        <p className="font-semibold text-[#0c1c5e] text-sm">{rp.name}</p>
+                        <p className="font-semibold text-[#00244F] text-sm">{rp.name}</p>
                       </div>
                     </Link>
                     <div className="px-3 pb-3">
                       <button
                         onClick={() => addItem({ categorySlug: category.slug, categoryName: category.name, productSlug: rp.slug, productName: rp.name, variant: rp.variants[0], unit: rp.units[0], image: rp.image })}
-                        className="w-full flex items-center justify-center gap-1 bg-[#0c1c5e] hover:bg-[#1a4fdb] text-white py-2 rounded-lg text-xs font-semibold transition-colors"
+                        className="w-full flex items-center justify-center gap-1 bg-[#00244F] hover:bg-[#FF7F00] text-white py-2 rounded-lg text-xs font-semibold transition-colors"
                       >
                         <ShoppingBag className="w-3.5 h-3.5" /> Add to Quote
                       </button>

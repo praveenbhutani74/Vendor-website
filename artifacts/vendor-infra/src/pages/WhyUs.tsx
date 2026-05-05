@@ -69,10 +69,10 @@ export default function WhyUs() {
                 transition={{ delay: i * 0.07, duration: 0.5 }}
                 className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
               >
-                <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-2xl mb-5">
+                <div className="w-12 h-12 bg-[#FFF4E0] rounded-xl flex items-center justify-center text-2xl mb-5">
                   {r.icon}
                 </div>
-                <h3 className="text-[#0c1c5e] font-bold text-lg mb-3">{r.title}</h3>
+                <h3 className="text-[#00244F] font-bold text-lg mb-3">{r.title}</h3>
                 <p className="text-gray-600 leading-relaxed text-sm">{r.desc}</p>
               </motion.div>
             ))}
@@ -80,15 +80,15 @@ export default function WhyUs() {
         </div>
       </section>
 
-      <section className="py-16 bg-[#1a4fdb]">
+      <section className="py-16 bg-[#FF7F00]">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Ready to get started?</h2>
-          <p className="text-blue-100 mb-8 max-w-xl mx-auto">
+          <p className="text-white/85 mb-8 max-w-xl mx-auto">
             Join thousands of infrastructure professionals already using Vendor Infra.
           </p>
           <Link
             href="/contact"
-            className="inline-block bg-white text-[#1a4fdb] font-semibold px-8 py-4 rounded-full hover:bg-blue-50 transition-colors"
+            className="inline-block bg-white text-[#FF7F00] font-semibold px-8 py-4 rounded-full hover:bg-[#FFF4E0] transition-colors"
           >
             Book a Free Demo
           </Link>

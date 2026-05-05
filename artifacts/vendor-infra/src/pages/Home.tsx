@@ -9,7 +9,7 @@ import {
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 
-/* ── animated counter ─────────────────────────────── */
+/* -- animated counter ------------------------------- */
 function Counter({ target, suffix = "", prefix = "" }: { target: number; suffix?: string; prefix?: string }) {
   const [count, setCount] = useState(0);
   const ref = useRef<HTMLSpanElement>(null);
@@ -28,7 +28,7 @@ function Counter({ target, suffix = "", prefix = "" }: { target: number; suffix?
   return <span ref={ref}>{prefix}{count.toLocaleString("en-IN")}{suffix}</span>;
 }
 
-/* ── fade-up wrapper ──────────────────────────────── */
+/* -- fade-up wrapper -------------------------------- */
 function FadeUp({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) {
   return (
     <motion.div
@@ -43,7 +43,7 @@ function FadeUp({ children, delay = 0, className = "" }: { children: React.React
   );
 }
 
-/* ── stagger grid container ──────────────────────── */
+/* -- stagger grid container ------------------------ */
 const gridVariants = {
   hidden: {},
   show: { transition: { staggerChildren: 0.05, delayChildren: 0.1 } },
@@ -53,7 +53,7 @@ const gridItem = {
   show:   { opacity: 1, y: 0, transition: { duration: 0.45, ease: [0.22, 1, 0.36, 1] } },
 };
 
-/* ── data ─────────────────────────────────────────── */
+/* -- data ------------------------------------------- */
 const services = [
   { icon: Search,      title: "AI-Powered Vendor Discovery",     desc: "Search and compare verified vendors by rating, size, and capability for every item in your Bill of Quantities." },
   { icon: Zap,         title: "Smart Price Discovery",           desc: "Send instant proposals and receive multiple quotes to identify the best supplier at the right price." },
@@ -123,7 +123,7 @@ const testimonials = [
   {
     name: "Priya Sharma",
     role: "Procurement Head, Infrastructure Developer",
-    text: "The price discovery feature alone is worth it. We received 8 competitive quotes within 48 hours — something that used to take us 3 weeks manually.",
+    text: "The price discovery feature alone is worth it. We received 8 competitive quotes within 48 hours � something that used to take us 3 weeks manually.",
     rating: 5,
   },
   {
@@ -172,15 +172,15 @@ const financingPartners = [
 ];
 
 const whyPoints = [
-  { title: "End-to-End Value Chain Integration", desc: "From vendor discovery and material procurement to financing, insurance and equipment hire/sales — one platform." },
-  { title: "Single Unified Data Lake",           desc: "All project, procurement, vendor, and site data — fully unified and instantly accessible. Eliminate silos." },
+  { title: "End-to-End Value Chain Integration", desc: "From vendor discovery and material procurement to financing, insurance and equipment hire/sales � one platform." },
+  { title: "Single Unified Data Lake",           desc: "All project, procurement, vendor, and site data � fully unified and instantly accessible. Eliminate silos." },
   { title: "Smart Decision Support via Market Intelligence", desc: "Sector insights, schedules of rates, competitive intelligence, and tender & PQ samples." },
   { title: "AI & ML-Driven Insights",           desc: "Match with the best-suited vendors and generate real-time analytics for smarter, data-backed decisions." },
   { title: "Safety, Security & Trust Built In", desc: "Every vendor is vetted. ISO 27001-certified data security ensures your information is always protected." },
   { title: "Dedicated Support & Accountability",desc: "Round-the-clock team with dedicated account managers to guide you at every stage." },
 ];
 
-/* ── LogoMarquee — infinite auto-scroll strip ─────── */
+/* -- LogoMarquee � infinite auto-scroll strip ------- */
 function LogoMarquee({ logos, bg = "white" }: { logos: { name: string; logo: string }[]; bg?: string }) {
   const doubled = [...logos, ...logos];
   return (
@@ -214,7 +214,7 @@ function LogoMarquee({ logos, bg = "white" }: { logos: { name: string; logo: str
   );
 }
 
-/* ── component ────────────────────────────────────── */
+/* -- component -------------------------------------- */
 export default function Home() {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
 
@@ -227,33 +227,33 @@ export default function Home() {
     <div className="min-h-screen flex flex-col overflow-x-hidden">
       <Navbar />
 
-      {/* ── HERO ───────────────────────────────────── */}
-      <section className="relative bg-[#0a1540] overflow-hidden flex flex-col">
+      {/* -- HERO ------------------------------------- */}
+      <section className="relative bg-[#00244F] overflow-hidden flex flex-col">
         <div className="absolute inset-0 opacity-[0.07]"
           style={{ backgroundImage: "radial-gradient(circle at 1px 1px,#ffffff 1px,transparent 0)", backgroundSize: "36px 36px" }} />
-        <div className="absolute right-0 top-0 w-1/2 h-full bg-gradient-to-l from-[#1a4fdb]/30 to-transparent" />
+        <div className="absolute right-0 top-0 w-1/2 h-full bg-gradient-to-l from-[#FF7F00]/30 to-transparent" />
         <div className="absolute right-0 top-0 w-[55%] h-full hidden lg:block">
           <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&q=80" alt="" className="w-full h-full object-cover opacity-20" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0a1540] via-[#0a1540]/60 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#00244F] via-[#00244F]/60 to-transparent" />
         </div>
 
         <div className="container mx-auto px-4 relative z-10 pt-28 pb-20 flex-1 flex items-center">
           <div className="max-w-2xl">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
               className="inline-flex items-center gap-2 bg-white/10 backdrop-blur rounded-full px-4 py-1.5 mb-6">
-              <span className="w-2 h-2 bg-[#f5c518] rounded-full animate-pulse" />
+              <span className="w-2 h-2 bg-[#FFB401] rounded-full animate-pulse" />
               <span className="text-white/80 text-sm font-medium">AI-Powered Platform for Infrastructure</span>
             </motion.div>
 
             <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1 }}
               className="text-4xl md:text-6xl font-black text-white leading-tight mb-6">
               Artificial Intelligence &{" "}
-              <span className="text-[#f5c518]">Market Intelligence</span>{" "}
+              <span className="text-[#FFB401]">Market Intelligence</span>{" "}
               for Infrastructure
             </motion.h1>
 
             <motion.p initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.2 }}
-              className="text-blue-200 text-lg leading-relaxed mb-8 max-w-lg">
+              className="text-white/80 text-lg leading-relaxed mb-8 max-w-lg">
               Empowering Contractors & Vendors with an AI-powered platform to discover partners,
               access project opportunities, source materials, and scale execution.
             </motion.p>
@@ -261,7 +261,7 @@ export default function Home() {
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }}
               className="flex flex-wrap gap-4">
               <Link href="/services">
-                <button className="bg-[#f5c518] hover:bg-[#e6b800] text-[#0a1540] font-bold px-8 py-4 rounded-full text-base transition-all duration-200 shadow-lg shadow-yellow-500/20 hover:scale-105">
+                <button className="bg-[#FFB401] hover:bg-[#FF9C00] text-[#00244F] font-bold px-8 py-4 rounded-full text-base transition-all duration-200 shadow-lg shadow-[#FF7F00]/20 hover:scale-105">
                   Get Started
                 </button>
               </Link>
@@ -276,18 +276,18 @@ export default function Home() {
 
       </section>
 
-      {/* ── TRUSTED BY ─────────────────────────────── */}
+      {/* -- TRUSTED BY ------------------------------- */}
       <section className="py-12 bg-white border-b border-gray-100">
         <div className="container mx-auto px-4">
           <FadeUp className="text-center mb-8">
-            <p className="text-[#1a4fdb] font-semibold uppercase tracking-widest text-xs mb-1">Trusted By</p>
-            <h2 className="text-xl font-bold text-[#0c1c5e]">Chosen by the companies building India's National Infrastructure pipeline</h2>
+            <p className="text-[#FF7F00] font-semibold uppercase tracking-widest text-xs mb-1">Trusted By</p>
+            <h2 className="text-xl font-bold text-[#00244F]">Chosen by the companies building India's National Infrastructure pipeline</h2>
           </FadeUp>
           <LogoMarquee logos={trustedBy} />
         </div>
       </section>
 
-      {/* ── STATS ──────────────────────────────────── */}
+      {/* -- STATS ------------------------------------ */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <motion.div
@@ -299,10 +299,10 @@ export default function Home() {
           >
             {stats.map((s, i) => (
               <motion.div key={i} variants={gridItem} className="text-left pl-4 md:pl-10">
-                <div className="text-5xl md:text-7xl font-black text-[#f5c518] leading-none mb-2">
+                <div className="text-5xl md:text-7xl font-black text-[#FFB401] leading-none mb-2">
                   <Counter target={s.value} suffix={s.suffix} />
                 </div>
-                <h3 className="text-xl md:text-2xl font-bold text-[#0c1c5e] mt-3 mb-1">{s.label}</h3>
+                <h3 className="text-xl md:text-2xl font-bold text-[#00244F] mt-3 mb-1">{s.label}</h3>
                 <p className="text-gray-500 text-sm leading-relaxed max-w-xs">{s.sub}</p>
               </motion.div>
             ))}
@@ -310,12 +310,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── SERVICES ───────────────────────────────── */}
+      {/* -- SERVICES --------------------------------- */}
       <section className="py-24 bg-gray-50">
         <div className="container mx-auto px-4">
           <FadeUp className="text-center mb-14">
-            <p className="text-[#1a4fdb] font-semibold uppercase tracking-widest text-sm mb-3">Services</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0c1c5e]">Our Comprehensive Services</h2>
+            <p className="text-[#FF7F00] font-semibold uppercase tracking-widest text-sm mb-3">Services</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#00244F]">Our Comprehensive Services</h2>
             <p className="text-gray-500 mt-4 max-w-2xl mx-auto">Comprehensive AI-powered solutions for every stage of your infrastructure and construction lifecycle.</p>
           </FadeUp>
 
@@ -329,10 +329,10 @@ export default function Home() {
             {services.map((s, i) => (
               <motion.div key={i} variants={gridItem}>
                 <div className="bg-white rounded-2xl p-7 shadow-sm border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group h-full">
-                  <div className="w-12 h-12 bg-[#1a4fdb]/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-[#1a4fdb] transition-colors duration-300">
-                    <s.icon className="w-6 h-6 text-[#1a4fdb] group-hover:text-white transition-colors duration-300" />
+                  <div className="w-12 h-12 bg-[#FF7F00]/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-[#FF7F00] transition-colors duration-300">
+                    <s.icon className="w-6 h-6 text-[#FF7F00] group-hover:text-white transition-colors duration-300" />
                   </div>
-                  <h3 className="font-bold text-[#0c1c5e] text-lg mb-2">{s.title}</h3>
+                  <h3 className="font-bold text-[#00244F] text-lg mb-2">{s.title}</h3>
                   <p className="text-gray-500 text-sm leading-relaxed">{s.desc}</p>
                 </div>
               </motion.div>
@@ -341,7 +341,7 @@ export default function Home() {
 
           <FadeUp delay={0.1} className="text-center mt-12">
             <Link href="/services">
-              <button className="inline-flex items-center gap-2 border-2 border-[#1a4fdb] text-[#1a4fdb] hover:bg-[#1a4fdb] hover:text-white font-semibold px-7 py-3 rounded-full transition-all duration-200">
+              <button className="inline-flex items-center gap-2 border-2 border-[#FF7F00] text-[#FF7F00] hover:bg-[#FF7F00] hover:text-white font-semibold px-7 py-3 rounded-full transition-all duration-200">
                 View All Services <ArrowRight className="w-4 h-4" />
               </button>
             </Link>
@@ -349,13 +349,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── MATERIALS ──────────────────────────────── */}
+      {/* -- MATERIALS -------------------------------- */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <FadeUp>
-              <p className="text-[#1a4fdb] font-semibold uppercase tracking-widest text-sm mb-3">Materials</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#0c1c5e] mb-6">
+              <p className="text-[#FF7F00] font-semibold uppercase tracking-widest text-sm mb-3">Materials</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#00244F] mb-6">
                 One Destination for All Project Material Needs
               </h2>
               <p className="text-gray-500 leading-relaxed mb-6">
@@ -366,13 +366,13 @@ export default function Home() {
               <ul className="space-y-3 mb-8">
                 {["Wide range of raw material categories", "Verified and rated suppliers", "Real-time pricing and availability", "Integrated delivery and logistics support"].map(p => (
                   <li key={p} className="flex items-center gap-3 text-gray-700 text-sm">
-                    <CheckCircle2 className="w-5 h-5 text-[#1a4fdb] shrink-0" />
+                    <CheckCircle2 className="w-5 h-5 text-[#FF7F00] shrink-0" />
                     {p}
                   </li>
                 ))}
               </ul>
               <Link href="/materials">
-                <button className="bg-[#1a4fdb] text-white font-semibold px-7 py-3 rounded-full hover:bg-[#0c1c5e] transition-colors">
+                <button className="bg-[#FF7F00] text-white font-semibold px-7 py-3 rounded-full hover:bg-[#00244F] transition-colors">
                   Explore Materials
                 </button>
               </Link>
@@ -390,7 +390,7 @@ export default function Home() {
                   <motion.div key={m.name} variants={gridItem}
                     className="relative rounded-xl overflow-hidden aspect-square group cursor-pointer">
                     <img src={m.img} alt={m.name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0c1c5e]/80 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#00244F]/80 to-transparent" />
                     <p className="absolute bottom-2 left-2 right-2 text-white text-xs font-semibold leading-tight">{m.name}</p>
                   </motion.div>
                 ))}
@@ -400,17 +400,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── SECTORS ────────────────────────────────── */}
-      <section className="py-24 bg-[#0c1c5e] relative overflow-hidden">
+      {/* -- SECTORS ---------------------------------- */}
+      <section className="py-24 bg-[#00244F] relative overflow-hidden">
         <div className="absolute inset-0 opacity-10"
           style={{ backgroundImage: "radial-gradient(circle at 1px 1px,#ffffff 1px,transparent 0)", backgroundSize: "30px 30px" }} />
         <div className="container mx-auto px-4 relative z-10">
           <FadeUp className="text-center mb-14">
-            <p className="text-blue-300 font-semibold uppercase tracking-widest text-sm mb-3">Sectors</p>
+            <p className="text-[#FFB401] font-semibold uppercase tracking-widest text-sm mb-3">Sectors</p>
             <h2 className="text-3xl md:text-4xl font-bold text-white">
               One Platform for the 20+ Infrastructure Sectors
             </h2>
-            <p className="text-blue-200 mt-4 max-w-2xl mx-auto">
+            <p className="text-white/80 mt-4 max-w-2xl mx-auto">
               From roads to renewable energy, Vendor Infra covers every major infrastructure vertical in India.
             </p>
           </FadeUp>
@@ -425,7 +425,7 @@ export default function Home() {
             {sectors.map((sector) => (
               <motion.div key={sector} variants={{ hidden: { opacity: 0, scale: 0.85 }, show: { opacity: 1, scale: 1, transition: { duration: 0.35 } } }}>
                 <Link href="/sectors">
-                  <span className="inline-block px-5 py-2.5 bg-white/10 hover:bg-white hover:text-[#0c1c5e] border border-white/20 hover:border-white rounded-full text-sm font-medium text-white transition-all duration-200 cursor-pointer">
+                  <span className="inline-block px-5 py-2.5 bg-white/10 hover:bg-white hover:text-[#00244F] border border-white/20 hover:border-white rounded-full text-sm font-medium text-white transition-all duration-200 cursor-pointer">
                     {sector}
                   </span>
                 </Link>
@@ -435,7 +435,7 @@ export default function Home() {
 
           <FadeUp delay={0.2} className="text-center mt-12">
             <Link href="/sectors">
-              <button className="border-2 border-white text-white hover:bg-white hover:text-[#0c1c5e] font-semibold px-8 py-3 rounded-full transition-all duration-200 inline-flex items-center gap-2">
+              <button className="border-2 border-white text-white hover:bg-white hover:text-[#00244F] font-semibold px-8 py-3 rounded-full transition-all duration-200 inline-flex items-center gap-2">
                 Explore All Sectors <ArrowRight className="w-4 h-4" />
               </button>
             </Link>
@@ -443,12 +443,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── WHY VENDOR INFRA ───────────────────────── */}
+      {/* -- WHY VENDOR INFRA ------------------------- */}
       <section className="py-24 bg-gray-50">
         <div className="container mx-auto px-4">
           <FadeUp className="text-center mb-14">
-            <p className="text-[#1a4fdb] font-semibold uppercase tracking-widest text-sm mb-3">Why Us</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0c1c5e]">Everything you need to know about Supply Chain</h2>
+            <p className="text-[#FF7F00] font-semibold uppercase tracking-widest text-sm mb-3">Why Us</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#00244F]">Everything you need to know about Supply Chain</h2>
             <p className="text-gray-500 mt-4 max-w-2xl mx-auto">One Platform. One Ecosystem. Infinite Possibilities.</p>
           </FadeUp>
 
@@ -461,9 +461,9 @@ export default function Home() {
           >
             {whyPoints.map((p, i) => (
               <motion.div key={i} variants={gridItem}>
-                <div className="bg-white rounded-2xl p-7 border border-gray-100 shadow-sm hover:shadow-md hover:border-[#1a4fdb]/30 transition-all duration-300 h-full">
-                  <div className="w-10 h-10 bg-[#1a4fdb] text-white rounded-full flex items-center justify-center font-bold text-sm mb-5">{i + 1}</div>
-                  <h3 className="font-bold text-[#0c1c5e] mb-2">{p.title}</h3>
+                <div className="bg-white rounded-2xl p-7 border border-gray-100 shadow-sm hover:shadow-md hover:border-[#FF7F00]/30 transition-all duration-300 h-full">
+                  <div className="w-10 h-10 bg-[#FF7F00] text-white rounded-full flex items-center justify-center font-bold text-sm mb-5">{i + 1}</div>
+                  <h3 className="font-bold text-[#00244F] mb-2">{p.title}</h3>
                   <p className="text-gray-500 text-sm leading-relaxed">{p.desc}</p>
                 </div>
               </motion.div>
@@ -472,7 +472,7 @@ export default function Home() {
 
           <FadeUp delay={0.1} className="text-center mt-12">
             <Link href="/why-us">
-              <button className="bg-[#1a4fdb] text-white font-semibold px-8 py-4 rounded-full hover:bg-[#0c1c5e] transition-colors inline-flex items-center gap-2">
+              <button className="bg-[#FF7F00] text-white font-semibold px-8 py-4 rounded-full hover:bg-[#00244F] transition-colors inline-flex items-center gap-2">
                 Learn More About Us <ArrowRight className="w-4 h-4" />
               </button>
             </Link>
@@ -480,12 +480,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── BLOG ───────────────────────────────────── */}
+      {/* -- BLOG ------------------------------------- */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <FadeUp className="text-center mb-14">
-            <p className="text-[#1a4fdb] font-semibold uppercase tracking-widest text-sm mb-3">Blog</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0c1c5e]">
+            <p className="text-[#FF7F00] font-semibold uppercase tracking-widest text-sm mb-3">Blog</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#00244F]">
               Blog Trends, Technologies, Developments in Construction Industry
             </h2>
           </FadeUp>
@@ -505,12 +505,12 @@ export default function Home() {
                   </div>
                   <div className="p-6 flex flex-col flex-1">
                     <div className="flex items-center gap-3 mb-3">
-                      <span className="bg-[#1a4fdb]/10 text-[#1a4fdb] text-xs font-semibold px-3 py-1 rounded-full">{b.cat}</span>
+                      <span className="bg-[#FF7F00]/10 text-[#FF7F00] text-xs font-semibold px-3 py-1 rounded-full">{b.cat}</span>
                       <span className="text-gray-400 text-xs">{b.date}</span>
                     </div>
-                    <h3 className="font-bold text-[#0c1c5e] leading-snug mb-3 group-hover:text-[#1a4fdb] transition-colors">{b.title}</h3>
+                    <h3 className="font-bold text-[#00244F] leading-snug mb-3 group-hover:text-[#FF7F00] transition-colors">{b.title}</h3>
                     <p className="text-gray-500 text-sm leading-relaxed flex-1">{b.excerpt}</p>
-                    <Link href="/blog" className="mt-4 inline-flex items-center gap-1 text-[#1a4fdb] text-sm font-semibold hover:gap-2 transition-all">
+                    <Link href="/blog" className="mt-4 inline-flex items-center gap-1 text-[#FF7F00] text-sm font-semibold hover:gap-2 transition-all">
                       Read More <ArrowRight className="w-4 h-4" />
                     </Link>
                   </div>
@@ -521,13 +521,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── TESTIMONIALS ───────────────────────────── */}
-      <section className="py-24 bg-[#0c1c5e] relative overflow-hidden">
+      {/* -- TESTIMONIALS ----------------------------- */}
+      <section className="py-24 bg-[#00244F] relative overflow-hidden">
         <div className="absolute inset-0 opacity-10"
           style={{ backgroundImage: "radial-gradient(circle at 1px 1px,#ffffff 1px,transparent 0)", backgroundSize: "30px 30px" }} />
         <div className="container mx-auto px-4 relative z-10">
           <FadeUp className="text-center mb-14">
-            <p className="text-blue-300 font-semibold uppercase tracking-widest text-sm mb-3">Testimonials</p>
+            <p className="text-[#FFB401] font-semibold uppercase tracking-widest text-sm mb-3">Testimonials</p>
             <h2 className="text-3xl md:text-4xl font-bold text-white">Client Testimonials</h2>
           </FadeUp>
 
@@ -543,14 +543,14 @@ export default function Home() {
               >
                 <div className="flex justify-center gap-1 mb-6">
                   {Array.from({ length: testimonials[activeTestimonial].rating }).map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-[#f5c518] fill-[#f5c518]" />
+                    <Star key={i} className="w-5 h-5 text-[#FFB401] fill-[#FFB401]" />
                   ))}
                 </div>
-                <p className="text-blue-100 text-lg leading-relaxed mb-8 italic">
+                <p className="text-white/85 text-lg leading-relaxed mb-8 italic">
                   "{testimonials[activeTestimonial].text}"
                 </p>
                 <p className="text-white font-bold">{testimonials[activeTestimonial].name}</p>
-                <p className="text-blue-300 text-sm mt-1">{testimonials[activeTestimonial].role}</p>
+                <p className="text-[#FFB401] text-sm mt-1">{testimonials[activeTestimonial].role}</p>
               </motion.div>
             </AnimatePresence>
 
@@ -574,23 +574,23 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── ASSOCIATIONS ───────────────────────────── */}
+      {/* -- ASSOCIATIONS ----------------------------- */}
       <section className="py-12 bg-gray-50 border-y border-gray-100">
         <div className="container mx-auto px-4">
           <FadeUp className="text-center mb-8">
-            <p className="text-[#1a4fdb] font-semibold uppercase tracking-widest text-xs mb-1">Associations</p>
-            <h2 className="text-xl font-bold text-[#0c1c5e]">We are Proud to be a part of</h2>
+            <p className="text-[#FF7F00] font-semibold uppercase tracking-widest text-xs mb-1">Associations</p>
+            <h2 className="text-xl font-bold text-[#00244F]">We are Proud to be a part of</h2>
           </FadeUp>
           <LogoMarquee logos={associations} />
         </div>
       </section>
 
-      {/* ── FINANCING PARTNERS ─────────────────────── */}
+      {/* -- FINANCING PARTNERS ----------------------- */}
       <section className="py-20 bg-white border-t border-gray-100">
         <div className="container mx-auto px-4 max-w-5xl">
           <FadeUp className="text-center mb-12">
-            <p className="text-[#1a4fdb] font-semibold uppercase tracking-widest text-sm mb-3">/ Our Financing Partners /</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0c1c5e]">
+            <p className="text-[#FF7F00] font-semibold uppercase tracking-widest text-sm mb-3">/ Our Financing Partners /</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#00244F]">
               Who help us drive innovation in the<br />Supply Chain Financing
             </h2>
           </FadeUp>
@@ -614,8 +614,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── CTA ────────────────────────────────────── */}
-      <section className="py-20 bg-gradient-to-r from-[#0c1c5e] to-[#1a4fdb] relative overflow-hidden">
+      {/* -- CTA -------------------------------------- */}
+      <section className="py-20 bg-gradient-to-r from-[#00244F] to-[#FF7F00] relative overflow-hidden">
         <div className="absolute inset-0 opacity-10"
           style={{ backgroundImage: "radial-gradient(circle at 1px 1px,#ffffff 1px,transparent 0)", backgroundSize: "28px 28px" }} />
         <div className="container mx-auto px-4 text-center relative z-10">
@@ -623,17 +623,17 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to transform your infrastructure business?
             </h2>
-            <p className="text-blue-200 mb-10 max-w-xl mx-auto text-lg">
+            <p className="text-white/80 mb-10 max-w-xl mx-auto text-lg">
               Join thousands of contractors, vendors, and EPC companies already on the platform.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link href="/contact">
-                <button className="bg-white text-[#0c1c5e] font-bold px-9 py-4 rounded-full hover:bg-blue-50 transition-all hover:scale-105 shadow-lg shadow-black/10">
+                <button className="bg-white text-[#00244F] font-bold px-9 py-4 rounded-full hover:bg-[#FFF4E0] transition-all hover:scale-105 shadow-lg shadow-black/10">
                   Get Started Free
                 </button>
               </Link>
               <Link href="/pricing">
-                <button className="border-2 border-white text-white font-semibold px-9 py-4 rounded-full hover:bg-white hover:text-[#0c1c5e] transition-colors">
+                <button className="border-2 border-white text-white font-semibold px-9 py-4 rounded-full hover:bg-white hover:text-[#00244F] transition-colors">
                   View Pricing
                 </button>
               </Link>
@@ -646,3 +646,4 @@ export default function Home() {
     </div>
   );
 }
+

@@ -97,7 +97,7 @@ export default function Sectors() {
       <Navbar />
 
       {/* Hero */}
-      <section className="relative bg-[#0c1c5e] py-24 overflow-hidden">
+      <section className="relative bg-[#00244F] py-24 overflow-hidden">
         <div
           className="absolute inset-0 opacity-10"
           style={{
@@ -110,7 +110,7 @@ export default function Sectors() {
           <motion.p
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-[#1a4fdb] font-semibold uppercase tracking-widest text-sm mb-4"
+            className="text-[#FF7F00] font-semibold uppercase tracking-widest text-sm mb-4"
           >
             / Sectors /
           </motion.p>
@@ -121,13 +121,13 @@ export default function Sectors() {
             className="text-4xl md:text-5xl font-bold text-white mb-6"
           >
             Enabling transformation across{" "}
-            <span className="text-[#4d7bff]">20+ sectors</span>
+            <span className="text-[#FFB401]">20+ sectors</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-blue-200 text-lg max-w-2xl mx-auto"
+            className="text-white/80 text-lg max-w-2xl mx-auto"
           >
             From roads to renewable energy, Vendor Infra powers procurement, collaboration
             and supply chain across every major infrastructure vertical in India.
@@ -158,10 +158,10 @@ export default function Sectors() {
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0c1c5e]/90 via-[#0c1c5e]/30 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#00244F]/90 via-[#00244F]/30 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-6">
                   <h3 className="text-white font-bold text-xl mb-1">{sector.name}</h3>
-                  <p className="text-blue-200 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-white/80 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     {sector.description}
                   </p>
                 </div>
@@ -172,17 +172,17 @@ export default function Sectors() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-[#1a4fdb]">
+      <section className="py-16 bg-[#FF7F00]">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
             Ready to streamline your sector's supply chain?
           </h2>
-          <p className="text-blue-100 mb-8 max-w-xl mx-auto">
+          <p className="text-white/85 mb-8 max-w-xl mx-auto">
             Join thousands of contractors, vendors and EPC companies already on Vendor Infra.
           </p>
           <Link
             href="/contact"
-            className="inline-block bg-white text-[#1a4fdb] font-semibold px-8 py-4 rounded-full hover:bg-blue-50 transition-colors"
+            className="inline-block bg-white text-[#FF7F00] font-semibold px-8 py-4 rounded-full hover:bg-[#FFF4E0] transition-colors"
           >
             Get in Touch
           </Link>

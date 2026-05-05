@@ -24,7 +24,7 @@ export function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto px-4 h-20 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 shrink-0">
-          <img src="https://vendorinfra.com/storage/2025/10/Logo-Blue-1.png" alt="Vendor Infra Logo" className="h-10" />
+          <img src="/brand/Logo-Blue-1.png" alt="Vendor Infra Logo" className="h-10 w-auto" />
         </Link>
 
         {/* Desktop Navigation */}
@@ -45,7 +45,7 @@ export function Navbar() {
           <Link href="/quote-cart" className="relative p-2 text-foreground/70 hover:text-primary transition-colors">
             <ShoppingCart className="w-5 h-5" />
             {total > 0 && (
-              <span className="absolute -top-0.5 -right-0.5 w-4 h-4 bg-[#1a4fdb] text-white text-[10px] font-black rounded-full flex items-center justify-center leading-none">
+              <span className="absolute -top-0.5 -right-0.5 w-4 h-4 bg-[#FF7F00] text-white text-[10px] font-black rounded-full flex items-center justify-center leading-none">
                 {total > 9 ? "9+" : total}
               </span>
             )}
@@ -61,7 +61,7 @@ export function Navbar() {
           <Link href="/quote-cart" className="relative p-2 text-foreground/70">
             <ShoppingCart className="w-5 h-5" />
             {total > 0 && (
-              <span className="absolute -top-0.5 -right-0.5 w-4 h-4 bg-[#1a4fdb] text-white text-[10px] font-black rounded-full flex items-center justify-center">
+              <span className="absolute -top-0.5 -right-0.5 w-4 h-4 bg-[#FF7F00] text-white text-[10px] font-black rounded-full flex items-center justify-center">
                 {total > 9 ? "9+" : total}
               </span>
             )}

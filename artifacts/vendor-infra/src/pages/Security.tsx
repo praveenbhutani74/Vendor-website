@@ -60,8 +60,8 @@ export default function Security() {
 
       <section className="py-20 bg-gray-50 flex-1">
         <div className="container mx-auto px-4 max-w-5xl">
-          <div className="bg-blue-50 border border-blue-100 rounded-2xl p-8 mb-12 text-center">
-            <p className="text-[#0c1c5e] font-medium leading-relaxed max-w-3xl mx-auto">
+          <div className="bg-[#FFF4E0] border border-[#FFD8A8] rounded-2xl p-8 mb-12 text-center">
+            <p className="text-[#00244F] font-medium leading-relaxed max-w-3xl mx-auto">
               We know how important and confidential your pricing information is to your business and competitive edge.
               Feel reassured knowing that Vendor Infra was built from the ground up and is operated on a daily basis
               to ensure that your confidential data is always secure and confidential.
@@ -80,12 +80,12 @@ export default function Security() {
               >
                 <div className="flex items-center gap-4 mb-6">
                   <span className="text-3xl">{pillar.icon}</span>
-                  <h3 className="text-[#0c1c5e] font-bold text-xl">{pillar.title}</h3>
+                  <h3 className="text-[#00244F] font-bold text-xl">{pillar.title}</h3>
                 </div>
                 <ul className="space-y-3">
                   {pillar.points.map((point) => (
                     <li key={point} className="flex items-start gap-3 text-sm text-gray-600">
-                      <span className="text-[#1a4fdb] font-bold mt-0.5 shrink-0">✓</span>
+                      <span className="text-[#FF7F00] font-bold mt-0.5 shrink-0">✓</span>
                       {point}
                     </li>
                   ))}
@@ -98,10 +98,10 @@ export default function Security() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mt-12 bg-[#0c1c5e] text-white rounded-2xl p-8 text-center"
+            className="mt-12 bg-[#00244F] text-white rounded-2xl p-8 text-center"
           >
             <h3 className="text-xl font-bold mb-3">ISO 27001 Certified</h3>
-            <p className="text-blue-200 max-w-2xl mx-auto text-sm leading-relaxed">
+            <p className="text-white/80 max-w-2xl mx-auto text-sm leading-relaxed">
               Vendor Infra is ISO 27001 certified for Information Security Management. This globally recognized
               certification validates that our security practices meet the highest international standards for
               protecting your data.

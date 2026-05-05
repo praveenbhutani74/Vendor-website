@@ -31,13 +31,13 @@ export default function Contact() {
       
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative bg-[#0c1c5e] text-white py-20 overflow-hidden">
+        <section className="relative bg-[#00244F] text-white py-20 overflow-hidden">
           <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_1px_1px,#ffffff_1px,transparent_0)] bg-[size:40px_40px]"></div>
           <div className="container mx-auto px-4 relative z-10 text-center max-w-4xl animate-in fade-in slide-in-from-bottom-8 duration-1000">
             <h1 className="text-4xl md:text-5xl font-bold leading-tight tracking-tight mb-6">
               Let's connect and build something great together
             </h1>
-            <p className="text-xl text-blue-100 font-light max-w-2xl mx-auto">
+            <p className="text-xl text-white/85 font-light max-w-2xl mx-auto">
               We are here to help you move faster. Let's connect and collaborate — the Vendor Infra team is just a message away.
             </p>
           </div>
@@ -50,7 +50,7 @@ export default function Contact() {
               {/* Contact Info */}
               <div className="md:col-span-2 space-y-8">
                 <div className="bg-white p-8 rounded-2xl shadow-sm border border-border/50">
-                  <h3 className="text-2xl font-bold text-[#0c1c5e] mb-6">Contact Information</h3>
+                  <h3 className="text-2xl font-bold text-[#00244F] mb-6">Contact Information</h3>
                   
                   <div className="space-y-6">
                     <div className="flex items-start gap-4">
@@ -103,7 +103,7 @@ export default function Contact() {
               {/* Contact Form */}
               <div className="md:col-span-3">
                 <div className="bg-white p-8 rounded-2xl shadow-sm border border-border/50">
-                  <h3 className="text-2xl font-bold text-[#0c1c5e] mb-6">Send us a message</h3>
+                  <h3 className="text-2xl font-bold text-[#00244F] mb-6">Send us a message</h3>
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid sm:grid-cols-2 gap-6">
                       <div className="space-y-2">

@@ -65,13 +65,13 @@ const management = [
   },
   {
     name: "Sukhdeep Bhogal",
-    role: "Advisor â€” Product & Engineering",
+    role: "Advisor — Product & Engineering",
     photo: "https://vendorinfra.com/storage/2025/11/VI-employee-photos-1.png",
     linkedin: "https://www.linkedin.com/in/sukhdeepbhogal/",
   },
   {
     name: "Munish Gupta",
-    role: "Advisor â€” Finance & Accounts",
+    role: "Advisor — Finance & Accounts",
     photo: "https://vendorinfra.com/storage/2025/11/12.png",
     linkedin: "https://www.linkedin.com/in/munishgupta06/",
   },
@@ -80,13 +80,13 @@ const management = [
 const advisory = [
   {
     name: "Shailendra Kumar Tripathi",
-    role: "Dy. MD & CEO, JMC Project (India) Limited â€” Kalpataru Group",
+    role: "Dy. MD & CEO, JMC Project (India) Limited — Kalpataru Group",
     photo: "https://vendorinfra.com/storage/2025/11/1.png",
     linkedin: "https://www.linkedin.com/in/shailendra-kumar-tripathi-866330106/",
   },
   {
     name: "Sanjeev Kumar Gupta",
-    role: "CEO-KEDM Â· Ex MD & CEO Lahari (GOI) Â· Ex Accenture, Microsoft, IBM",
+    role: "CEO-KEDM · Ex MD & CEO Lahari (GOI) · Ex Accenture, Microsoft, IBM",
     photo: "https://vendorinfra.com/storage/2025/11/4.png",
     linkedin: "https://www.linkedin.com/in/sanjeevkgupta/",
   },
@@ -98,7 +98,7 @@ const advisory = [
   },
   {
     name: "Nitin Jain",
-    role: "Head Corporate Center L&T Â· Ex Sr. VP Kalpataru Â· Ex CSO DCM Shriram, Shapoorji Pallonji",
+    role: "Head Corporate Center L&T · Ex Sr. VP Kalpataru · Ex CSO DCM Shriram, Shapoorji Pallonji",
     photo: "https://vendorinfra.com/storage/2025/11/2.png",
     linkedin: "https://www.linkedin.com/in/njain2000/",
   },
@@ -131,10 +131,10 @@ const tagColors: Record<string, string> = {
   HR:           "bg-pink-100 text-pink-700",
   Strategy:     "bg-purple-100 text-purple-700",
   Procurement:  "bg-orange-100 text-orange-700",
-  Product:      "bg-blue-100 text-blue-700",
-  "Product & IT": "bg-blue-100 text-blue-700",
+  Product:      "bg-[#FFF4E0] text-[#00244F]",
+  "Product & IT": "bg-[#FFF4E0] text-[#00244F]",
   Finance:      "bg-green-100 text-green-700",
-  Operations:   "bg-yellow-100 text-yellow-700",
+  Operations:   "bg-[#FFF4E0] text-[#8A3F00]",
   Accounts:     "bg-teal-100 text-teal-700",
   Data:         "bg-indigo-100 text-indigo-700",
   Legal:        "bg-red-100 text-red-700",
@@ -148,13 +148,13 @@ export default function About() {
 
       <main className="flex-1">
         {/* Hero */}
-        <section className="relative bg-[#0c1c5e] text-white py-24 overflow-hidden">
+        <section className="relative bg-[#00244F] text-white py-24 overflow-hidden">
           <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_1px_1px,#ffffff_1px,transparent_0)] bg-[size:40px_40px]" />
           <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
             <motion.p
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
-              className="text-blue-300 font-semibold text-sm uppercase tracking-widest mb-4"
+              className="text-[#FFB401] font-semibold text-sm uppercase tracking-widest mb-4"
             >
               About Us
             </motion.p>
@@ -170,7 +170,7 @@ export default function About() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="text-xl text-blue-100 font-light"
+              className="text-xl text-white/85 font-light"
             >
               Built on Trust and Reliability with AI and ML
             </motion.p>
@@ -183,10 +183,10 @@ export default function About() {
             <div className="grid md:grid-cols-2 gap-14">
               <div className="space-y-5">
                 <div className="flex items-center gap-3 mb-2">
-                  <div className="w-10 h-10 rounded-xl bg-[#1a4fdb]/10 flex items-center justify-center">
-                    <Target className="w-5 h-5 text-[#1a4fdb]" />
+                  <div className="w-10 h-10 rounded-xl bg-[#FF7F00]/10 flex items-center justify-center">
+                    <Target className="w-5 h-5 text-[#FF7F00]" />
                   </div>
-                  <h2 className="text-2xl font-bold text-[#0c1c5e]">The Vendor Infra Story</h2>
+                  <h2 className="text-2xl font-bold text-[#00244F]">The Vendor Infra Story</h2>
                 </div>
                 <p className="text-gray-600 leading-relaxed">It connects infrastructure companies, vendors, suppliers, contractors, consultants, and developers, offering a cost-effective and efficient way to collaborate, source, and execute projects across diverse sectors.</p>
                 <p className="text-gray-600 leading-relaxed">Headquartered in Delhi NCR, Vendor Infra was founded by industry leaders with over two decades of experience in managing and executing large-scale infrastructure projects.</p>
@@ -194,10 +194,10 @@ export default function About() {
               </div>
               <div className="space-y-5">
                 <div className="flex items-center gap-3 mb-2">
-                  <div className="w-10 h-10 rounded-xl bg-[#1a4fdb]/10 flex items-center justify-center">
-                    <Shield className="w-5 h-5 text-[#1a4fdb]" />
+                  <div className="w-10 h-10 rounded-xl bg-[#FF7F00]/10 flex items-center justify-center">
+                    <Shield className="w-5 h-5 text-[#FF7F00]" />
                   </div>
-                  <h2 className="text-2xl font-bold text-[#0c1c5e]">What We Do</h2>
+                  <h2 className="text-2xl font-bold text-[#00244F]">What We Do</h2>
                 </div>
                 <p className="text-gray-600 leading-relaxed">Vendor Infra offers more than just Vendor Discovery and Marketplace. We provide a powerful AI ecosystem designed for B2B businesses across all sectors of the infrastructure and construction industry.</p>
                 <p className="text-gray-600 leading-relaxed">Our AI- and ML-powered platform seamlessly blends technology with real-world needs, enabling smarter decision-making, cost optimization, and faster collaboration.</p>
@@ -211,8 +211,8 @@ export default function About() {
         <section className="py-20 bg-gray-50 border-y">
           <div className="container mx-auto px-4 max-w-5xl">
             <div className="text-center mb-12">
-              <p className="text-[#1a4fdb] font-semibold text-sm uppercase tracking-widest mb-2">Why Vendor Infra</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#0c1c5e]">One Platform. One Ecosystem. Infinite Possibilities</h2>
+              <p className="text-[#FF7F00] font-semibold text-sm uppercase tracking-widest mb-2">Why Vendor Infra</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#00244F]">One Platform. One Ecosystem. Infinite Possibilities</h2>
             </div>
             <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-5">
               {usps.map((usp, i) => (
@@ -224,8 +224,8 @@ export default function About() {
                   transition={{ delay: i * 0.06 }}
                   className="flex items-start gap-4 p-5 bg-white rounded-2xl shadow-sm border border-gray-100"
                 >
-                  <CheckCircle2 className="w-6 h-6 text-[#1a4fdb] shrink-0 mt-0.5" />
-                  <span className="font-semibold text-[#0c1c5e]">{usp}</span>
+                  <CheckCircle2 className="w-6 h-6 text-[#FF7F00] shrink-0 mt-0.5" />
+                  <span className="font-semibold text-[#00244F]">{usp}</span>
                 </motion.div>
               ))}
             </div>
@@ -236,8 +236,8 @@ export default function About() {
         <section className="py-12 bg-white border-b border-gray-100">
           <div className="container mx-auto px-4">
             <div className="text-center mb-8">
-              <p className="text-[#1a4fdb] font-semibold uppercase tracking-widest text-xs mb-1">Trusted By</p>
-              <h2 className="text-xl font-bold text-[#0c1c5e]">Chosen by the companies building India's National Infrastructure pipeline</h2>
+              <p className="text-[#FF7F00] font-semibold uppercase tracking-widest text-xs mb-1">Trusted By</p>
+              <h2 className="text-xl font-bold text-[#00244F]">Chosen by the companies building India's National Infrastructure pipeline</h2>
             </div>
             <LogoMarquee logos={trustedBy} />
           </div>
@@ -247,8 +247,8 @@ export default function About() {
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4 max-w-6xl">
             <div className="text-center mb-14">
-              <p className="text-[#1a4fdb] font-semibold text-sm uppercase tracking-widest mb-2">Leadership</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#0c1c5e]">Management Team</h2>
+              <p className="text-[#FF7F00] font-semibold text-sm uppercase tracking-widest mb-2">Leadership</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#00244F]">Management Team</h2>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {management.map((m, i) => (
@@ -261,7 +261,7 @@ export default function About() {
                   className="group relative bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-md hover:shadow-xl transition-all duration-300"
                 >
                   {/* Photo */}
-                  <div className="relative h-56 bg-gradient-to-br from-[#0c1c5e]/5 to-[#1a4fdb]/10 overflow-hidden">
+                  <div className="relative h-56 bg-gradient-to-br from-[#00244F]/5 to-[#FF7F00]/10 overflow-hidden">
                     <img
                       src={m.photo}
                       alt={m.name}
@@ -280,11 +280,11 @@ export default function About() {
                   </div>
                   {/* Info */}
                   <div className="p-5">
-                    <h4 className="font-bold text-[#0c1c5e] text-base leading-snug">{m.name}</h4>
+                    <h4 className="font-bold text-[#00244F] text-base leading-snug">{m.name}</h4>
                     <p className="text-sm text-gray-500 mt-1 leading-snug">{m.role}</p>
                   </div>
                   {/* Bottom accent */}
-                  <div className="absolute bottom-0 left-0 w-0 group-hover:w-full h-0.5 bg-[#1a4fdb] transition-all duration-300" />
+                  <div className="absolute bottom-0 left-0 w-0 group-hover:w-full h-0.5 bg-[#FF7F00] transition-all duration-300" />
                 </motion.div>
               ))}
             </div>
@@ -292,10 +292,10 @@ export default function About() {
         </section>
 
         {/* Advisory Board */}
-        <section className="py-20 bg-[#0c1c5e]">
+        <section className="py-20 bg-[#00244F]">
           <div className="container mx-auto px-4 max-w-6xl">
             <div className="text-center mb-14">
-              <p className="text-blue-300 font-semibold text-sm uppercase tracking-widest mb-2">Guidance & Expertise</p>
+              <p className="text-[#FFB401] font-semibold text-sm uppercase tracking-widest mb-2">Guidance & Expertise</p>
               <h2 className="text-3xl md:text-4xl font-bold text-white">Advisory Board</h2>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -316,7 +316,7 @@ export default function About() {
                       className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                       onError={e => { (e.target as HTMLImageElement).src = `https://ui-avatars.com/api/?name=${encodeURIComponent(a.name)}&background=1a4fdb&color=fff&size=300`; }}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0c1c5e]/60 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#00244F]/60 to-transparent" />
                     <a
                       href={a.linkedin}
                       target="_blank"
@@ -329,7 +329,7 @@ export default function About() {
                   {/* Info */}
                   <div className="p-5">
                     <h4 className="font-bold text-white text-base leading-snug">{a.name}</h4>
-                    <p className="text-sm text-blue-200 mt-1.5 leading-relaxed">{a.role}</p>
+                    <p className="text-sm text-white/80 mt-1.5 leading-relaxed">{a.role}</p>
                   </div>
                 </motion.div>
               ))}
@@ -341,8 +341,8 @@ export default function About() {
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4 max-w-7xl">
             <div className="text-center mb-14">
-              <p className="text-[#1a4fdb] font-semibold text-sm uppercase tracking-widest mb-2">Our People</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#0c1c5e]">Team Members</h2>
+              <p className="text-[#FF7F00] font-semibold text-sm uppercase tracking-widest mb-2">Our People</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#00244F]">Team Members</h2>
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5">
               {team.map((member, i) => (
@@ -355,7 +355,7 @@ export default function About() {
                   className="group bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300"
                 >
                   {/* Photo */}
-                  <div className="relative h-44 overflow-hidden bg-gradient-to-br from-[#0c1c5e]/5 to-[#1a4fdb]/10">
+                  <div className="relative h-44 overflow-hidden bg-gradient-to-br from-[#00244F]/5 to-[#FF7F00]/10">
                     <img
                       src={member.photo}
                       alt={member.name}
@@ -380,7 +380,7 @@ export default function About() {
                   </div>
                   {/* Info */}
                   <div className="p-3.5">
-                    <h4 className="font-bold text-[#0c1c5e] text-sm leading-tight">{member.name}</h4>
+                    <h4 className="font-bold text-[#00244F] text-sm leading-tight">{member.name}</h4>
                     <p className="text-xs text-gray-500 mt-0.5">{member.role}</p>
                     {/* LinkedIn link (always visible on mobile) */}
                     {member.linkedin && (
@@ -405,3 +405,4 @@ export default function About() {
     </div>
   );
 }
+

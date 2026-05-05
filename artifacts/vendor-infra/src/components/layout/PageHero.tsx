@@ -8,7 +8,7 @@ interface PageHeroProps {
 
 export function PageHero({ eyebrow, title, subtitle }: PageHeroProps) {
   return (
-    <section className="relative bg-[#0c1c5e] py-20 overflow-hidden">
+    <section className="relative bg-[#00244F] py-20 overflow-hidden">
       <div
         className="absolute inset-0 opacity-10"
         style={{
@@ -21,7 +21,7 @@ export function PageHero({ eyebrow, title, subtitle }: PageHeroProps) {
         <motion.p
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-[#4d7bff] font-semibold uppercase tracking-widest text-sm mb-4"
+          className="text-[#FFB401] font-semibold uppercase tracking-widest text-sm mb-4"
         >
           {eyebrow}
         </motion.p>
@@ -37,7 +37,7 @@ export function PageHero({ eyebrow, title, subtitle }: PageHeroProps) {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="text-blue-200 text-lg max-w-2xl mx-auto"
+          className="text-white/80 text-lg max-w-2xl mx-auto"
         >
           {subtitle}
         </motion.p>

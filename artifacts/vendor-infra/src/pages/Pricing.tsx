@@ -235,14 +235,14 @@ function PlanCard({
       transition={{ duration: 0.5, delay: index * 0.1 }}
       className={`relative rounded-2xl p-8 flex flex-col ${
         plan.highlight
-          ? "bg-[#1a4fdb] text-white shadow-2xl shadow-blue-500/30 scale-105"
+          ? "bg-[#FF7F00] text-white shadow-2xl shadow-blue-500/30 scale-105"
           : "bg-white text-gray-900 shadow-lg border border-gray-100"
       }`}
     >
       {plan.badge && (
         <div
           className={`absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider ${
-            plan.highlight ? "bg-white text-[#1a4fdb]" : "bg-[#1a4fdb] text-white"
+            plan.highlight ? "bg-white text-[#FF7F00]" : "bg-[#FF7F00] text-white"
           }`}
         >
           {plan.badge}
@@ -256,19 +256,19 @@ function PlanCard({
           {plan.name}
         </h3>
         <p
-          className={`text-sm mb-4 ${plan.highlight ? "text-blue-100" : "text-gray-500"}`}
+          className={`text-sm mb-4 ${plan.highlight ? "text-white/85" : "text-gray-500"}`}
         >
           {plan.description}
         </p>
         <div className="flex items-end gap-1">
           <span
-            className={`text-4xl font-extrabold ${plan.highlight ? "text-white" : "text-[#0c1c5e]"}`}
+            className={`text-4xl font-extrabold ${plan.highlight ? "text-white" : "text-[#00244F]"}`}
           >
             {plan.price}
           </span>
           {plan.period && (
             <span
-              className={`text-sm mb-1 ${plan.highlight ? "text-blue-200" : "text-gray-400"}`}
+              className={`text-sm mb-1 ${plan.highlight ? "text-white/80" : "text-gray-400"}`}
             >
               {plan.period}
             </span>
@@ -280,19 +280,19 @@ function PlanCard({
         {plan.features.map((f) => (
           <li key={f} className="flex items-start gap-3 text-sm">
             <Check
-              className={`w-4 h-4 mt-0.5 shrink-0 ${plan.highlight ? "text-blue-200" : "text-[#1a4fdb]"}`}
+              className={`w-4 h-4 mt-0.5 shrink-0 ${plan.highlight ? "text-white/80" : "text-[#FF7F00]"}`}
             />
-            <span className={plan.highlight ? "text-blue-50" : "text-gray-700"}>{f}</span>
+            <span className={plan.highlight ? "text-white/90" : "text-gray-700"}>{f}</span>
           </li>
         ))}
         {plan.excluded.map((f) => (
           <li key={f} className="flex items-start gap-3 text-sm opacity-40">
             <span
-              className={`w-4 h-4 mt-0.5 shrink-0 text-center leading-none ${plan.highlight ? "text-blue-200" : "text-gray-400"}`}
+              className={`w-4 h-4 mt-0.5 shrink-0 text-center leading-none ${plan.highlight ? "text-white/80" : "text-gray-400"}`}
             >
               ✕
             </span>
-            <span className={plan.highlight ? "text-blue-100" : "text-gray-500"}>{f}</span>
+            <span className={plan.highlight ? "text-white/85" : "text-gray-500"}>{f}</span>
           </li>
         ))}
       </ul>
@@ -301,8 +301,8 @@ function PlanCard({
         href="/contact"
         className={`block text-center font-semibold py-3 px-6 rounded-full transition-all duration-200 ${
           plan.highlight
-            ? "bg-white text-[#1a4fdb] hover:bg-blue-50"
-            : "bg-[#1a4fdb] text-white hover:bg-[#0c1c5e]"
+            ? "bg-white text-[#FF7F00] hover:bg-[#FFF4E0]"
+            : "bg-[#FF7F00] text-white hover:bg-[#00244F]"
         }`}
       >
         {plan.cta}
@@ -333,7 +333,7 @@ export default function Pricing() {
       <Navbar />
 
       {/* Hero */}
-      <section className="relative bg-[#0c1c5e] py-24 overflow-hidden">
+      <section className="relative bg-[#00244F] py-24 overflow-hidden">
         <div
           className="absolute inset-0 opacity-10"
           style={{
@@ -346,7 +346,7 @@ export default function Pricing() {
           <motion.p
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-[#4d7bff] font-semibold uppercase tracking-widest text-sm mb-4"
+            className="text-[#FFB401] font-semibold uppercase tracking-widest text-sm mb-4"
           >
             Pricing
           </motion.p>
@@ -357,13 +357,13 @@ export default function Pricing() {
             className="text-4xl md:text-5xl font-bold text-white mb-4"
           >
             Clear and transparent{" "}
-            <span className="text-[#4d7bff]">pricing</span>
+            <span className="text-[#FFB401]">pricing</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-blue-200 text-lg max-w-xl mx-auto"
+            className="text-white/80 text-lg max-w-xl mx-auto"
           >
             Choose the plan that fits your business. No hidden fees, no long-term lock-ins.
           </motion.p>
@@ -379,7 +379,7 @@ export default function Pricing() {
               onClick={() => setAudience(tab)}
               className={`px-6 py-2 rounded-full text-sm font-semibold transition-all duration-200 ${
                 audience === tab
-                  ? "bg-[#1a4fdb] text-white shadow-md"
+                  ? "bg-[#FF7F00] text-white shadow-md"
                   : "bg-gray-100 text-gray-600 hover:bg-gray-200"
               }`}
             >
@@ -400,7 +400,7 @@ export default function Pricing() {
             key={audience}
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="text-3xl font-bold text-[#0c1c5e] text-center mb-12"
+            className="text-3xl font-bold text-[#00244F] text-center mb-12"
           >
             Pricing for {audienceLabel}
           </motion.h2>
@@ -416,7 +416,7 @@ export default function Pricing() {
       {/* FAQ teaser */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 max-w-3xl">
-          <h2 className="text-2xl font-bold text-[#0c1c5e] text-center mb-10">
+          <h2 className="text-2xl font-bold text-[#00244F] text-center mb-10">
             Frequently Asked Questions
           </h2>
           <div className="space-y-6">
@@ -448,17 +448,17 @@ export default function Pricing() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-[#1a4fdb]">
+      <section className="py-16 bg-[#FF7F00]">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
             Not sure which plan is right for you?
           </h2>
-          <p className="text-blue-100 mb-8 max-w-xl mx-auto">
+          <p className="text-white/85 mb-8 max-w-xl mx-auto">
             Our team will help you find the best fit. Book a free demo and we will walk you through everything.
           </p>
           <Link
             href="/contact"
-            className="inline-block bg-white text-[#1a4fdb] font-semibold px-8 py-4 rounded-full hover:bg-blue-50 transition-colors"
+            className="inline-block bg-white text-[#FF7F00] font-semibold px-8 py-4 rounded-full hover:bg-[#FFF4E0] transition-colors"
           >
             Book a Free Demo
           </Link>

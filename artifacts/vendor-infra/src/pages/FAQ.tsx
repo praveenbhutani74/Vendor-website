@@ -67,9 +67,9 @@ function FAQItem({ q, a }: { q: string; a: string }) {
         onClick={() => setOpen(!open)}
         className="w-full flex items-center justify-between gap-4 p-6 text-left hover:bg-gray-50 transition-colors"
       >
-        <span className="font-semibold text-[#0c1c5e] text-sm leading-relaxed">{q}</span>
+        <span className="font-semibold text-[#00244F] text-sm leading-relaxed">{q}</span>
         <ChevronDown
-          className={`w-5 h-5 text-[#1a4fdb] shrink-0 transition-transform duration-300 ${open ? "rotate-180" : ""}`}
+          className={`w-5 h-5 text-[#FF7F00] shrink-0 transition-transform duration-300 ${open ? "rotate-180" : ""}`}
         />
       </button>
       <AnimatePresence>
@@ -110,7 +110,7 @@ export default function FAQ() {
               transition={{ delay: gi * 0.1 }}
               className="mb-12"
             >
-              <h2 className="text-[#0c1c5e] font-bold text-xl mb-6 pb-3 border-b border-gray-200">
+              <h2 className="text-[#00244F] font-bold text-xl mb-6 pb-3 border-b border-gray-200">
                 {group.group}
               </h2>
               <div className="space-y-3">
@@ -121,14 +121,14 @@ export default function FAQ() {
             </motion.div>
           ))}
 
-          <div className="bg-[#1a4fdb] text-white rounded-2xl p-8 text-center">
+          <div className="bg-[#FF7F00] text-white rounded-2xl p-8 text-center">
             <h3 className="text-xl font-bold mb-3">Still have questions?</h3>
-            <p className="text-blue-100 mb-6 text-sm">
+            <p className="text-white/85 mb-6 text-sm">
               Our team is ready to help. Reach out and we will get back to you within one business day.
             </p>
             <Link
               href="/contact"
-              className="inline-block bg-white text-[#1a4fdb] font-semibold px-6 py-3 rounded-full hover:bg-blue-50 transition-colors text-sm"
+              className="inline-block bg-white text-[#FF7F00] font-semibold px-6 py-3 rounded-full hover:bg-[#FFF4E0] transition-colors text-sm"
             >
               Contact Us
             </Link>

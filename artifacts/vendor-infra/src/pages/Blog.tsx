@@ -42,13 +42,13 @@ export default function Blog() {
       
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative bg-[#0c1c5e] text-white py-20 overflow-hidden">
+        <section className="relative bg-[#00244F] text-white py-20 overflow-hidden">
           <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_1px_1px,#ffffff_1px,transparent_0)] bg-[size:40px_40px]"></div>
           <div className="container mx-auto px-4 relative z-10 text-center max-w-4xl animate-in fade-in slide-in-from-bottom-8 duration-1000">
             <h1 className="text-4xl md:text-5xl font-bold leading-tight tracking-tight mb-6">
               Insights & Updates
             </h1>
-            <p className="text-xl text-blue-100 font-light max-w-2xl mx-auto">
+            <p className="text-xl text-white/85 font-light max-w-2xl mx-auto">
               Latest news, industry trends, and thoughts from the Vendor Infra team.
             </p>
           </div>
@@ -72,7 +72,7 @@ export default function Blog() {
                         </div>
                       </div>
                       
-                      <h2 className="text-2xl md:text-3xl font-bold text-[#0c1c5e] group-hover:text-primary transition-colors leading-tight">
+                      <h2 className="text-2xl md:text-3xl font-bold text-[#00244F] group-hover:text-primary transition-colors leading-tight">
                         <Link href="#">{post.title}</Link>
                       </h2>
                       
@@ -90,7 +90,7 @@ export default function Blog() {
                       </div>
 
                       <div className="pt-6 border-t border-border/50">
-                        <Link href="#" className="inline-flex items-center text-primary font-semibold hover:text-[#0c1c5e] transition-colors">
+                        <Link href="#" className="inline-flex items-center text-primary font-semibold hover:text-[#00244F] transition-colors">
                           Read Full Article
                           <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                         </Link>

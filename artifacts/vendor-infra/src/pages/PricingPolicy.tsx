@@ -56,7 +56,7 @@ export default function PricingPolicy() {
                 transition={{ delay: i * 0.05 }}
                 className={`p-8 ${i < sections.length - 1 ? "border-b border-gray-100" : ""}`}
               >
-                <h2 className="text-[#0c1c5e] font-bold text-lg mb-3">{s.title}</h2>
+                <h2 className="text-[#00244F] font-bold text-lg mb-3">{s.title}</h2>
                 {s.content.split("\n\n").map((para, j) => (
                   <p key={j} className="text-gray-600 leading-relaxed text-sm mb-3 last:mb-0">{para}</p>
                 ))}
